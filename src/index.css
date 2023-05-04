@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: var(--sub-title-font);
+    list-style-type: none;
+    text-decoration:  none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root{
+    --brown: #d4a373;
+    --beige: #fdf0d5;
+    --color:#2b2c28;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Cormorant Garamond';
+    font-weight: bold;
+}
+
+p{
+    font-family: 'Lexend';
+    font-size: 14px;
+}
+
+button{
+    font-size: 12px;
+}
+
+li > a{
+    font-family: 'Mukta';
+    font-size: 17px;
+    color: #FFF;
+}
+
+.section__top{
+    width: 100%;
+    display: flex;
+    padding-bottom: 5vh;
+    height: 90vh;
+}
+
+.top__welcome{
+    width: 50%;
+    background:var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+.welcome__img{
+    width: 60%;
+    margin-top: 20vh;
+}
+
+.top__nav{
+    position: absolute;
+    top:0;
+    padding-top: 15vh;
+}
+
+.top__nav,
+.welcome__title{
+    padding-bottom: 5vh;
+}
+
+.nav__item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.welcome__title{
+    position: absolute;
+    top: 0;
+    padding-top: 10vh;
+    font-size: 60px;
+}
+
+.welcome__citation{
+    font-size: 60px;
+    width: 95%;
+    text-align: center;
+}
+
+.item{
+    text-transform: uppercase;
+}
+
+#brown{
+    background: var(--brown);
+}
+
+#beige{
+    background: var(--beige);
+    color: var(--color);
+}
+
+
+/* A PROPOS DE MOI */
+
+.section__litleWelcome{
+    width: calc(100);
+    display: flex;
+    padding: 30px;
+}
+
+.litleWelcome__container{
+    width: 50%;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__img{
+    width: 80%;
+    border:solid 20px var(--beige);
+}
+
+.litleWelcome__title{
+    font-size: 45px;
+}
+
+.litleWelcome__bar{
+    width: 50px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: 1px;
+    background: var(--color);
+}
+
+.litleWelcome__txt{
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.litleWelcome__button{
+    margin-top: 3vh;
+}
+
+.litleWelcome__button{
+    background: var(--brown);
+    border: none;
+    text-transform: uppercase;
+    color: #FFF;
+    width: 15vw;
+    height: 45px;
+}
+
+/* BANNIERE CITATION */
+
+.section__citation{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--brown);
+    color: #FFF;
+}
+
+.citation__title{
+    font-size: 40px;
+    text-align: center;
+}
+
+.citation__img{
+    position: absolute;
+    padding-bottom: 39vh;
+}
+
+/* MES RÉALISATIONS */
+
+.section__realisation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15vh;
+}
+
+.realisation__container{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+}
+
+.realisation__card{
+    flex-basis: 22%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__img{
+    width: 100%;
+    height: 100%;
+}
+
+.realisation__title{
+    margin-top: 15vh;
+    font-size: 41px;
+    text-align: center;
+}
+
+
+.card__title{
+    font-size: 30px;
+}
+
+/*  CONTACT */
+
+
+.section__contact{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+.contact__container{
+    width: 50%;
+    height: 100%;
+    background: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#brownContact{
+    background: var(--brown);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    align-self: center;
+}
+
+
+#beigeContact{
+    background: var(--beige);
+}
+
+.contact__img{
+    height: 85vh;
+    width: 40vw;
+}
+
+
+.contact__title{
+    font-size: 41px;
+    text-align: center;
+}
+
+.form{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input, textarea{
+    outline: none;
+    border: none;
+    transition: 0.1s;
+    font-size: 15px;
+    font-family: 'Mukta';
+}
+
+input::placeholder, textarea::placeholder{
+    color: #D2D2D2;
+}
+
+input{
+    padding-left: 1vw;
+    height: 50px;
+    width: 35vw;
+}
+
+textarea{
+    padding-left: 1vw;
+    height: 100px;
+    width: 35vw;
+    padding-top: 1vh;
+}
+
+input:focus,
+textarea:focus{
+    border: solid 1px var(--color);
+}
+
+.form__button{
+    border: none;
+    width: 36vw;
+    height: 50px;
+    background: var(--brown);
+    color: #FFF;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.form__confirm{
+    color: forestgreen;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991.98px) {
+    #brown{
+        display: none;
+    }
+
+    #beige{
+        width: 100%;
+    }
+
+    .welcome__title{
+        text-align: center;
+    }
+
+    .section__litleWelcome {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .litleWelcome__button {
+        width: 30vw;
+        min-width: 50vw;
+    }
+
+    .welcome__title {
+        font-size: 50px;
+    }
+
+    .container__img {
+        width: 50vw;
+        min-width: 80vw;
+        margin-top: 5vh;
+    }
+
+    .citation__title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .citation__img{
+        display: none;
+    }
+
+
+    .realisation__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .section__contact {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #brownContact {
+        background: var(--brown);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #beigeContact {
+        width: 100%;
+    }
+
+    .contact__img {
+        height: 90%;
+        width: 90%;
+    }
+
+    .contact__title{
+        font-size: 30px;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    input, textarea, .form__button{
+        width: 90vw;
+    }
+
+    .form__button{
+        width: 91vw;
+    }
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    height: 20vh;
+    background:var(--brown);
+    margin-top: 10vh;
+}
