@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import PocketBase from 'pocketbase';
 const pb = new PocketBase('http://127.0.0.1:8090');
 import CardRealisations from "./CardRealisations";
+import ShowRealisation from './ShowRealisations';
 
 interface HomeProps {
     setActiveComponent: (component: string) => void,
@@ -14,14 +15,14 @@ interface Rea {
     titre: string,
     texte:string,
     texte_fin: string,
-    realisations: [],
-    avant: string,
-    apres: string
+    avant: string[]; 
+    apres: string[]; 
+    realisations: string[]; 
 }
 
 export default function Home({ setActiveComponent }: HomeProps) {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    //const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
@@ -31,6 +32,8 @@ export default function Home({ setActiveComponent }: HomeProps) {
     const [sendConfirm, setSendConfirm] = useState('');
     const formRef = useRef(null);
     const [stockRea, setStockRea ] = useState<Rea[]>([]);
+    const [ifSelect, setIfSelect] = useState(false);
+    const [stockSelect, setStockSelect ] = useState<Rea[]>([]);
 
     const data = {
         "nom": name,
@@ -46,7 +49,7 @@ export default function Home({ setActiveComponent }: HomeProps) {
         setSendConfirm('Votre message à bien été envoyer !');
 
         setTimeout(() => {
-            formRef.current.reset();
+            //formRef.current.reset();
             setSendConfirm('');
         }, 3000)
     }
@@ -57,23 +60,33 @@ export default function Home({ setActiveComponent }: HomeProps) {
                 sort: '-created',
             });
 
-            for(const r of rea){
-                setStockRea(l => [...l, {
-                    banniere: pb.files.getUrl( r,r.banniere ),
-                    lieux: r.lieux,
-                    moodboard: pb.files.getUrl( r,r.moodboard ),
-                    titre: r.titre,
-                    texte: r.texte,
-                    texte_fin: r.texte_fin,
-                    avant: r.avant,
-                    apres: r.apres,
-                    realisations: r.realisations
-                }]);
+            for (const r of rea) {
+                const modifiedRealisations: string[] = r.realisations.map((item: string) => pb.files.getUrl(r, item));
+                const modifiedAvant: string[] = r.avant.map((item: string) => pb.files.getUrl(r, item));
+                const modifiedApres: string[] = r.apres.map((item: string) => pb.files.getUrl(r, item));
+
+                setStockRea(l => [
+                    ...l,
+                    {
+                        banniere: pb.files.getUrl(r, r.banniere),
+                        lieux: r.lieux,
+                        moodboard: pb.files.getUrl(r, r.moodboard),
+                        titre: r.titre,
+                        texte: r.texte,
+                        texte_fin: r.texte_fin,
+                        avant: modifiedAvant,
+                        apres: modifiedApres,
+                        realisations: modifiedRealisations,
+                    }
+                ]);
             }
         };
         fetchData().catch(console.error);
     }, []);
 
+    if(ifSelect){
+        return <ShowRealisation banniere={stockSelect[0].banniere} lieux={stockSelect[0].lieux} texte_fin={stockSelect[0].texte_fin} moodboard={stockSelect[0].moodboard} titre={stockSelect[0].titre} texte={stockSelect[0].texte}  avant={stockSelect[0].avant} apres={stockSelect[0].apres} realisations={stockSelect[0].realisations}  />
+    }
 
     return (
         <>
@@ -90,7 +103,7 @@ export default function Home({ setActiveComponent }: HomeProps) {
                     <p className="litleWelcome__txt">roezfzepoezkzefklroezfzepoezkzefklroezfzepoezkzefk</p>
                     <p className="litleWelcome__txt">roezfzepoezkzefklroezfzepoezkzefklroezfzepoezkzefk</p>
 
-                    <button className="litleWelcome__button" onClick={() => {  setActiveComponent('Propos') }}>À propos de moi</button>
+                    <button className="litleWelcome__button" onClick={() => {  setActiveComponent('Propos') }}>A propos de moi</button>
                 </div>
 
                 <div className="litleWelcome__container">
@@ -111,12 +124,15 @@ export default function Home({ setActiveComponent }: HomeProps) {
                 <div className="litleWelcome__bar"></div>
                 <div className="realisation__container">
                     {stockRea.map(o => (
-                        <>
+                        <article onClick={() => {
+                            stockSelect.push(o);                         
+                            setIfSelect(true);
+                        }} className="realisation__card">
                             <CardRealisations img={o.banniere} title={o.titre}/>
-                        </>
+                        </article>
                     ))}
                 </div>
-                <button className="litleWelcome__button"  onClick={() => {  setActiveComponent('Realisations') }}>Découvrir plus de réalisations</button>
+                <button className="litleWelcome__button"  onClick={() => {  setActiveComponent('Realisations') }}>Decouvrir plus de réalisations</button>
             </section>
 
             <section id="contact" className="section__contact">

@@ -202,7 +202,6 @@ li > a{
 
 .realisation__card{
     flex-basis: 22%;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,6 +221,33 @@ li > a{
 
 .card__title{
     font-size: 30px;
+}
+
+.realisation__txt{
+    text-align: center;
+    width: 80vw;
+    font-size: 15px;
+    margin: 0 0 2vw 0;
+}
+
+.realisation__txtEnd{
+    text-align: center;
+    font-size: 15px;
+    margin: 0 0 2vw 0;
+}
+
+.before__after{
+    font-size: 35px;
+    margin: 0 0 2vw 0;
+}
+
+.rea__img{
+    display: flex;
+    justify-content: center;
+}
+
+.rea__imgMain{
+    width: 50vw;
 }
 
 /*  CONTACT */
@@ -403,7 +429,7 @@ textarea:focus{
     }
 
     .contact__title{
-        font-size: 30px;
+        font-size: 41px;
         margin-top: 5vh;
         text-align: center;
     }
@@ -417,6 +443,10 @@ textarea:focus{
     }
 }
 
+.moodboard___img{
+    width: 70vw;
+}
+
 /* Footer */
 
 .footer{
@@ -424,4 +454,10 @@ textarea:focus{
     height: 20vh;
     background:var(--brown);
     margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    flex-direction: column;
 }

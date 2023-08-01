@@ -7,9 +7,9 @@ interface CardRealisations {
 export default function CardRealisations({img, title}: CardRealisations) {
 
     return (
-        <article className="realisation__card">
+        <>
             <img className="card__img" src={img}></img>
             <h5>{title}</h5>
-        </article>
+        </>
     )
 }

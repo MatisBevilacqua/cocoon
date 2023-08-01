@@ -11,7 +11,7 @@ export default function Header({ setActiveComponent, title, img }: HeaderProps) 
 
     return (
         <>
-            <section className="section__top">
+            <header className="section__top">
                 <div id="beige" className="top__welcome">
                     <h1 className="welcome__title">Cocoon M’design</h1>
                     <img className="welcome__img" src={img}></img>
@@ -23,11 +23,11 @@ export default function Header({ setActiveComponent, title, img }: HeaderProps) 
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Acceuil');
-                            }}><a className="item__link" href="#acceuil">Acceuil</a></li>
+                            }}><a className="item__link" href="#acceuil">Accueil</a></li>
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Realisations');
-                            }}><a className="item__link" href="#realisations">Mes réalisations</a></li>
+                            }}><a className="item__link" href="#realisations">Mes realisations</a></li>
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Propos');
@@ -41,7 +41,7 @@ export default function Header({ setActiveComponent, title, img }: HeaderProps) 
                     </nav>
                     <h2 className="welcome__citation">{title}</h2>
                 </div>
-            </section>
+            </header>
         </>
     )
 }

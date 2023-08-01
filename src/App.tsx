@@ -15,7 +15,7 @@ function App() {
     const handleActiveComponentChange = (component: string): void => {
         setActiveComponent(component);
         if (component === 'Propos') {
-            setTitleHeader('À props de moi');
+            setTitleHeader('À propos de moi');
         }
 
         if(component === 'Realisations'){
@@ -23,7 +23,7 @@ function App() {
         }
 
         if(component === 'Acceuil'){
-            setTitleHeader('La vie commence après avoir mis de l\'odre dans votre maison');
+            setTitleHeader('La vie commence après avoir mis de l\'ordre dans votre maison');
         }
     }
 
