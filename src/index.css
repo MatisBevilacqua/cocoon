@@ -419,6 +419,7 @@ textarea:focus{
 
     #beigeContact {
         width: 100%;
+        height: 95vh;
     }
 
     .contact__img {
