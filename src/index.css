@@ -278,6 +278,7 @@ li > a{
 
 #beigeContact{
     background: var(--beige);
+    height: 95vh;
 }
 
 .contact__img{
