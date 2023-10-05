@@ -9,7 +9,7 @@ export default function CardRealisations({img, title}: CardRealisations) {
     return (
         <>
             <img className="card__img" src={img}></img>
-            <h5>{title}</h5>
+            <h5 className='card__title'>{title}</h5>
         </>
     )
 }

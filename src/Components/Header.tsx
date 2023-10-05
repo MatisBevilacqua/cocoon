@@ -27,15 +27,15 @@ export default function Header({ setActiveComponent, title, img }: HeaderProps) 
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Realisations');
-                            }}><a className="item__link" href="#realisations">Mes realisations</a></li>
+                            }}><a className="item__link" href="#realisations">Realisations</a></li>
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Propos');
-                            }}><a className="item__link" href="#propos">A propos de moi</a></li>
+                            }}><a className="item__link" href="#propos">A propos</a></li>
 
                             <li className="item" onClick={() => {
                                 setActiveComponent('Acceuil');
-                            }}><a className="item__link" href="#contact">Me contacter</a></li>
+                            }}><a className="item__link" href="#contact">Contact</a></li>
 
                         </ul>
                     </nav>

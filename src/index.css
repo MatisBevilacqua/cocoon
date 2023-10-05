@@ -2,52 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-weight: var(--sub-title-font);
     list-style-type: none;
-    text-decoration:  none;
+    text-decoration: none;
     scroll-behavior: smooth;
     text-decoration: none;
 }
 
-:root{
+:root {
     --brown: #d4a373;
     --beige: #fdf0d5;
-    --color:#2b2c28;
+    --color: #2b2c28;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Cormorant Garamond';
     font-weight: bold;
 }
 
-p{
+p {
     font-family: 'Lexend';
     font-size: 14px;
 }
 
-button{
+button {
     font-size: 12px;
 }
 
-li > a{
+li>a {
     font-family: 'Mukta';
     font-size: 17px;
     color: #FFF;
 }
 
-.section__top{
+.section__top {
     width: 100%;
     display: flex;
     padding-bottom: 5vh;
     height: 90vh;
 }
 
-.top__welcome{
+.top__welcome {
     width: 50%;
-    background:var(--color);
+    background: var(--color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,51 +60,51 @@ li > a{
     color: #FFF;
 }
 
-.welcome__img{
+.welcome__img {
     width: 60%;
     margin-top: 20vh;
 }
 
-.top__nav{
+.top__nav {
     position: absolute;
-    top:0;
+    top: 0;
     padding-top: 15vh;
 }
 
 .top__nav,
-.welcome__title{
+.welcome__title {
     padding-bottom: 5vh;
 }
 
-.nav__item{
+.nav__item {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.welcome__title{
+.welcome__title {
     position: absolute;
     top: 0;
     padding-top: 10vh;
     font-size: 60px;
 }
 
-.welcome__citation{
+.welcome__citation {
     font-size: 60px;
     width: 95%;
     text-align: center;
 }
 
-.item{
+.item {
     text-transform: uppercase;
 }
 
-#brown{
+#brown {
     background: var(--brown);
 }
 
-#beige{
+#beige {
     background: var(--beige);
     color: var(--color);
 }
@@ -107,13 +112,13 @@ li > a{
 
 /* A PROPOS DE MOI */
 
-.section__litleWelcome{
+.section__litleWelcome {
     width: calc(100);
     display: flex;
     padding: 30px;
 }
 
-.litleWelcome__container{
+.litleWelcome__container {
     width: 50%;
     background: #FFF;
     display: flex;
@@ -122,16 +127,16 @@ li > a{
     align-items: center;
 }
 
-.container__img{
+.container__img {
     width: 80%;
-    border:solid 20px var(--beige);
+    border: solid 20px var(--beige);
 }
 
-.litleWelcome__title{
+.litleWelcome__title {
     font-size: 45px;
 }
 
-.litleWelcome__bar{
+.litleWelcome__bar {
     width: 50px;
     margin-top: 3vh;
     margin-bottom: 3vh;
@@ -139,16 +144,16 @@ li > a{
     background: var(--color);
 }
 
-.litleWelcome__txt{
+.litleWelcome__txt {
     font-size: 15px;
     line-height: 1.7;
 }
 
-.litleWelcome__button{
+.litleWelcome__button {
     margin-top: 3vh;
 }
 
-.litleWelcome__button{
+.litleWelcome__button {
     background: var(--brown);
     border: none;
     text-transform: uppercase;
@@ -159,7 +164,7 @@ li > a{
 
 /* BANNIERE CITATION */
 
-.section__citation{
+.section__citation {
     width: 100%;
     height: 50vh;
     display: flex;
@@ -170,19 +175,19 @@ li > a{
     color: #FFF;
 }
 
-.citation__title{
+.citation__title {
     font-size: 40px;
     text-align: center;
 }
 
-.citation__img{
+.citation__img {
     position: absolute;
     padding-bottom: 39vh;
 }
 
 /* MES RÉALISATIONS */
 
-.section__realisation{
+.section__realisation {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -190,7 +195,7 @@ li > a{
     padding-bottom: 15vh;
 }
 
-.realisation__container{
+.realisation__container {
     width: 100%;
     gap: 20px;
     display: flex;
@@ -200,65 +205,65 @@ li > a{
     margin-bottom: 5vh;
 }
 
-.realisation__card{
+.realisation__card {
     flex-basis: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card__img{
+.card__img {
     width: 100%;
     height: 100%;
 }
 
-.realisation__title{
+.realisation__title {
     margin-top: 15vh;
     font-size: 41px;
     text-align: center;
 }
 
 
-.card__title{
+.card__title {
     font-size: 30px;
 }
 
-.realisation__txt{
+.realisation__txt {
     text-align: center;
     width: 80vw;
     font-size: 15px;
     margin: 0 0 2vw 0;
 }
 
-.realisation__txtEnd{
+.realisation__txtEnd {
     text-align: center;
     font-size: 15px;
     margin: 0 0 2vw 0;
 }
 
-.before__after{
+.before__after {
     font-size: 35px;
     margin: 0 0 2vw 0;
 }
 
-.rea__img{
+.rea__img {
     display: flex;
     justify-content: center;
 }
 
-.rea__imgMain{
+.rea__imgMain {
     width: 50vw;
 }
 
 /*  CONTACT */
 
 
-.section__contact{
+.section__contact {
     width: 100%;
     display: flex;
 }
 
-.contact__container{
+.contact__container {
     width: 50%;
     height: 100%;
     background: var(--color);
@@ -268,7 +273,7 @@ li > a{
     flex-direction: column;
 }
 
-#brownContact{
+#brownContact {
     background: var(--brown);
     padding-top: 5vh;
     padding-bottom: 5vh;
@@ -276,23 +281,23 @@ li > a{
 }
 
 
-#beigeContact{
+#beigeContact {
     background: var(--beige);
     height: 95vh;
 }
 
-.contact__img{
+.contact__img {
     height: 85vh;
     width: 40vw;
 }
 
 
-.contact__title{
+.contact__title {
     font-size: 41px;
     text-align: center;
 }
 
-.form{
+.form {
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -300,7 +305,8 @@ li > a{
     gap: 15px;
 }
 
-input, textarea{
+input,
+textarea {
     outline: none;
     border: none;
     transition: 0.1s;
@@ -308,17 +314,18 @@ input, textarea{
     font-family: 'Mukta';
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
     color: #D2D2D2;
 }
 
-input{
+input {
     padding-left: 1vw;
     height: 50px;
     width: 35vw;
 }
 
-textarea{
+textarea {
     padding-left: 1vw;
     height: 100px;
     width: 35vw;
@@ -326,11 +333,11 @@ textarea{
 }
 
 input:focus,
-textarea:focus{
+textarea:focus {
     border: solid 1px var(--color);
 }
 
-.form__button{
+.form__button {
     border: none;
     width: 36vw;
     height: 50px;
@@ -340,7 +347,7 @@ textarea:focus{
     text-transform: uppercase;
 }
 
-.form__confirm{
+.form__confirm {
     color: forestgreen;
     font-size: 17px;
     text-transform: uppercase;
@@ -349,15 +356,27 @@ textarea:focus{
 /* RESPONSIVE */
 
 @media (max-width: 991.98px) {
-    #brown{
-        display: none;
-    }
-
-    #beige{
+    #brown {
         width: 100%;
     }
 
-    .welcome__title{
+    #beige {
+        display: none;
+    }
+
+    .top__nav,
+    .welcome__title {
+        position: fixed;
+        background: var(--brown);
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        height: 16vh;
+    }
+
+    .welcome__title {
         text-align: center;
     }
 
@@ -387,7 +406,7 @@ textarea:focus{
         text-align: center;
     }
 
-    .citation__img{
+    .citation__img {
         display: none;
     }
 
@@ -428,31 +447,43 @@ textarea:focus{
         width: 90%;
     }
 
-    .contact__title{
+    .contact__title {
         font-size: 41px;
         margin-top: 5vh;
         text-align: center;
     }
 
-    input, textarea, .form__button{
+    input,
+    textarea,
+    .form__button {
         width: 90vw;
     }
 
-    .form__button{
+    .form__button {
         width: 91vw;
+    }
+
+    .card__img {
+        width: 80%;
+        height: 100%;
+    }
+
+    .card__title {
+        font-size: 30px;
     }
 }
 
-.moodboard___img{
+.moodboard___img {
     width: 70vw;
 }
 
 /* Footer */
 
-.footer{
+.footer {
     width: 100%;
     padding: 7vh 0 7vh 0;
-    background:var(--brown);
+    margin: 5vh 0 0 0;
+    background: var(--brown);
     display: flex;
     align-items: center;
     justify-content: center;
